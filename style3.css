@@ -1,0 +1,455 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@font-face {
+    font-family: 'KimjungchulGothic-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+}
+.clear {
+    clear: both;
+}
+.wrap {
+    background-image: url("img/bank_img.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 13000px;
+    overflow: hidden;
+}
+h1 {
+    font-size: 3.3rem;
+}
+h2 {
+    font-size: 2.8rem;
+    font-family: 'KimjungchulGothic-Bold';
+    color: #4F26D1;
+}
+h3 {
+    font-size: 2.2rem;
+    font-family: 'KimjungchulGothic-Bold';
+}
+h4 {
+    font-size: 1.3rem;
+    color: #454545;
+}
+p {
+    line-height: 2;
+}
+
+/*도파민이란? 파트*/
+#part1 {
+    /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
+
+    width: 1180px;
+    height: 5670px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/*콘텐츠-1 구현 시작*/
+.con1 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 600px;
+    margin-top: 100px;
+
+}
+.con1 h2 {
+    font-family: 'KimjungchulGothic-Bold';
+    color: #4F26D1;
+    position: absolute;
+    top: 210px;
+    left: 100px;
+}
+/*밑줄 인터렉션*/
+.con1 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4F26D1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s;
+}
+.con1 h2:hover::after {
+    transform: scaleX(1);
+}
+.con1 p {
+    position: absolute;
+    top: 330px;
+    left: 140px;
+    line-height: 2.3;
+}
+
+/*콘텐츠2 구현 시작*/
+.con2 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 700px;
+    margin-top: 150px;
+}
+.con2 h4 {
+    position: absolute;
+    top: 90px;
+    left: 450px;
+}
+.con2 h1 {
+    font-family: 'KimjungchulGothic-Bold';
+    color: #4F26D1;
+    position: absolute;
+    top: 130px;
+    left: 380px;
+}
+.con2 p {
+    position: absolute;
+    text-align: center;
+    top: 570px;
+    left: 320px;
+
+}
+/*아이콘 인터렉션*/
+.icon {
+    display: inline-block;
+    text-align: center;
+    margin-right: 70px;
+    transition: transform 0.3s ease-in-out;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+.icon img {
+    height: 240px;
+    max-width: 100%;
+}
+.icon_box {
+    position: absolute;
+    top: 260px;
+    left: 150px;
+}
+
+/*콘텐츠3 구현 시작*/
+.con3 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 700px;
+    margin-top: 350px;
+}
+.con3 h3 {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+}
+.con3 .no-font {
+    position: absolute;
+    width: 500px;
+    top: 160px;
+    left:80px;
+}
+/*아이콘 인터렉션*/
+.con3 .no-icon {
+    position: absolute;
+    width: 300px;
+    top: 390px;
+    left:320px;
+    animation: floatAnimation 1.5s infinite alternate;
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px); /* 원하는 만큼 조정 */
+    }
+}
+.con3 h2 {
+    position: absolute;
+    top: 320px;
+    left:680px;
+}
+.con3 p {
+    position: absolute;
+    top: 400px;
+    left:685px;
+}
+
+/*콘텐츠4 구현 시작*/
+.con4 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 600px;
+    margin-top: 450px;
+
+}
+.con4 h4 {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.con4 .logo-font {
+    position: absolute;
+    width: 400px;
+    top: 190px;
+    left: 150px;
+}
+.con4 p {
+    position: absolute;
+    top: 370px;
+    left: 150px;
+}
+.con4 .logo-icon {
+    position: absolute;
+    width: 380px;
+    top: 120px;
+    left: 640px;
+}
+
+/*콘텐츠5 구현 시작*/
+.con5-1 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 330px;
+    margin-top: 320px;
+
+}
+/*원 인터렉션*/
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #FFC5B1;
+    position: absolute;
+    animation: moveAndShrink 8s forwards infinite;
+    bottom: 0;
+    transform-origin: bottom;
+    left: 320px;
+}
+
+@keyframes moveAndShrink {
+    0%, 100% {
+        transform: translateX(0);
+        background-color: #FFC5B1;
+    }
+    50% {
+        transform: translateX(400px);
+        background-color: #BFAAFF;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+.con5-2 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 330px;
+
+}
+.con5-2 p {
+    font-family: KimjungchulGothic-Bold;
+    color: #494848;
+    position: absolute;
+    top: 130px;
+    left: 400px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.6;
+}
+.con5-2 .purple {
+    font-family: KimjungchulGothic-Bold;
+    color: #4F26D1;
+}
+
+.con5-2 .red {
+    font-family: KimjungchulGothic-Bold;
+    color: #ff8659;
+}
+
+/*콘텐츠6 구현 시작*/
+.con6 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 600px;
+    margin-top: 400px;
+}
+.con6 p {
+    position: absolute;
+    font-family: KimjungchulGothic-Bold;
+    color: #494848;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.6;
+    top: 90px;
+    left: 300px;
+}
+.con6 .purple {
+    font-family: KimjungchulGothic-Bold;
+    color: #4F26D1;
+}
+/*아이콘 인터렉션*/
+.icon-2 {
+    display: inline-block;
+    text-align: center;
+    margin-right: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+.icon-2:hover {
+    transform: scale(1.1);
+}
+.icon-2 img {
+    height: 200px;
+    max-width: 100%;
+}
+.icon_box-2 {
+    position: absolute;
+    top: 290px;
+    left: 120px;
+}
+
+/*파임 탄생 파트*/
+#part2 {
+    /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
+
+    width: 1180px;
+    height: 5670px;
+    margin: auto;
+    overflow: hidden;
+}
+/*앱소개 구현 시작*/
+.app {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 870px;
+    margin-top: 120px;
+}
+.logo-font1 {
+    position: absolute;
+    width: 220px;
+    top: 30px;
+    left: 80px;
+}
+.app h3 {
+    position: absolute;
+    font-size: 1.9rem;
+    color: #666666;
+    top: 80px;
+    left: 80px;
+}
+.app .cc {
+    position: absolute;
+    top: 620px;
+    left: 240px;
+    color: #4F26D1;
+}
+.app .yy {
+    position: absolute;
+    top: 620px;
+    left: 559px;
+    color: #4F26D1;
+}
+.app .jj {
+    position: absolute;
+    top: 620px;
+    left: 876px;
+    color: #4F26D1;
+}
+.app .time_logo {
+    position: absolute;
+    width: 400px;
+    top: 220px;
+    left: 380px;
+}
+.app p {
+    position: absolute;
+    text-align: center;
+    top: 730px;
+    left: 330px;
+}
+/*팀소개 인터렉션*/
+.icon-3 {
+    display: inline-block;
+    text-align: center;
+    margin-right: 70px;
+}
+.icon-3 img {
+    height: 240px;
+    max-width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+.icon_box-3 {
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+/*앱소개2 구현 시작*/
+.app2 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 870px;
+    margin-top: 370px;
+}
+.app2 h3 {
+    position: absolute;
+    letter-spacing: 8px;
+    top: 110px;
+    left: 330px;
+}
+.app2 h5 {
+    font-size: 1.3rem;
+    color: #4F26D1;
+    margin-bottom: 13px;
+}
+.app2 p {
+    line-height: 1.5;
+}
+.logo_font2 {
+    position: absolute;
+    width: 700px;
+    top: 200px;
+    left: 240px;
+}
+.font_box {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 550px 0;
+}
+.font_box > div {
+    flex: 1;
+    margin: 0 60px;
+    /*box-shadow: inset -5px -5px 15px rgb(198, 122, 22);*/
+}
