@@ -1,184 +1,162 @@
 @charset "UTF-8";
 
 /* 폰트 */
-@font-face {
-    font-family: 'KimjungchulGothic-Bold';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'LOTTERIACHAB';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 * {
     margin: 0;
     padding: 0;
 }
 body {
-    font-family: 'Pretendard-Regular';
+    font-family: 'Pretendard';
     font-size: 20px;
+    color: #E0DCEF;
+
 }
 .clear {
     clear: both;
 }
-.wrap {
-    background-image: url("img/bank_img.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 13000px;
+h6 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #D5C7FF;
+
+    position: absolute;
+    top: 253px;
+    left: 50px;
+}
+
+/* 상단 헤더 메뉴바 + 배너 */
+#banner-box {
+    background-color: #7B5FCE;
+    height: 1900px;
+}
+header{
+    /*ox-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
+    width: 1440px;
+    height: 953px;
+    background-image: url("img/banner_img.png");
+    margin: auto;
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
-h1 {
-    font-size: 3.3rem;
+#top_menu {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: background-color 0.3s ease;
 }
-h2 {
-    font-size: 2.8rem;
-    font-family: 'KimjungchulGothic-Bold';
-    color: #4F26D1;
+
+#top_menu.scrolled {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+#top_menu img {
+    height: 60px;
+    margin-left: 60px;
+}
+
+#nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    margin: 0 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#nav li:last-child {
+    margin-right: 60px;
+}
+#nav a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+.content {
+    padding: 20px;
+}
+#banner {
+    /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
+    width: 1440px;
+    height: 903px;
+    margin: auto;
+    position: relative;
+}
+.video-container {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; /* 원하는 경우 위쪽 여백 조정 */
+}
+
+iframe {
+    display: inline-block;
 }
 h3 {
-    font-size: 2.2rem;
-    font-family: 'KimjungchulGothic-Bold';
+    font-size: 50px;
+    font-weight: 700;
+    color: #4F31AE;
+    position: absolute;
 }
 h4 {
-    font-size: 1.3rem;
-    color: #454545;
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+
+}
+h5 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #4F26D1;
+    position: absolute;
+}
+h6 {
+    font-size: 25px;
+    font-weight: 500;
+    color: #4F31AE;
+    position: absolute;
 }
 p {
-    line-height: 2;
-}
-
-/*도파민이란? 파트*/
-#part1 {
-    /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
-
-    width: 1180px;
-    height: 5670px;
-    margin: auto;
-    overflow: hidden;
-}
-
-/*콘텐츠-1 구현 시작*/
-.con1 {
-    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
-    position: relative;
-    height: 600px;
-    margin-top: 100px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 35px;
+    color: black;
+    position: absolute;
 
 }
-.con1 h2 {
-    font-family: 'KimjungchulGothic-Bold';
-    color: #4F26D1;
-    position: absolute;
-    top: 210px;
-    left: 100px;
-}
-/*밑줄 인터렉션*/
-.con1 h2::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background-color: #4F26D1;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 1s;
-}
-.con1 h2:hover::after {
-    transform: scaleX(1);
-}
-.con1 p {
-    position: absolute;
-    top: 330px;
-    left: 140px;
-    line-height: 2.3;
-}
+.font-37 {
+    font-weight: 200;
+    font-size: 37px;
+    line-height: 50px;
+    color: #F3F0FF;
 
-/*콘텐츠2 구현 시작*/
-.con2 {
-    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
-    position: relative;
-    height: 700px;
-    margin-top: 150px;
-}
-.con2 h4 {
     position: absolute;
-    top: 90px;
-    left: 450px;
+    top: 463px;
+    left: 50px;
 }
-.con2 h1 {
-    font-family: 'KimjungchulGothic-Bold';
-    color: #4F26D1;
+#banner_logo {
     position: absolute;
-    top: 130px;
-    left: 380px;
+    top: 300px;
+    left: 50px;
 }
-.con2 p {
+#farm_img {
     position: absolute;
-    text-align: center;
-    top: 570px;
-    left: 320px;
-
-}
-/*아이콘 인터렉션*/
-.icon {
-    display: inline-block;
-    text-align: center;
-    margin-right: 70px;
-    transition: transform 0.3s ease-in-out;
-}
-.icon:hover {
-    transform: scale(1.1);
-}
-.icon img {
-    height: 240px;
-    max-width: 100%;
-}
-.icon_box {
-    position: absolute;
-    top: 260px;
-    left: 150px;
-}
-
-/*콘텐츠3 구현 시작*/
-.con3 {
-    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
-    position: relative;
-    height: 700px;
-    margin-top: 350px;
-}
-.con3 h3 {
-    position: absolute;
-    top: 80px;
-    left: 80px;
-}
-.con3 .no-font {
-    position: absolute;
-    width: 500px;
-    top: 160px;
-    left:80px;
-}
-/*아이콘 인터렉션*/
-.con3 .no-icon {
-    position: absolute;
-    width: 300px;
-    top: 390px;
-    left:320px;
+    top: 270px;
+    left: 800px;
     animation: floatAnimation 1.5s infinite alternate;
 }
 @keyframes floatAnimation {
@@ -186,59 +164,218 @@ p {
         transform: translateY(0);
     }
     100% {
-        transform: translateY(-15px); /* 원하는 만큼 조정 */
+        transform: translateY(-15px);
     }
 }
-.con3 h2 {
+
+#banner_icon {
     position: absolute;
-    top: 320px;
-    left:680px;
+    top: 800px;
+    left: 600px;
+    /*animation: blinkAnimation 5s infinite alternate;*/
+}
+
+@keyframes blinkAnimation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.wrap {
+    background-color: #E0DCEF;
+    background-repeat: no-repeat;
+    height: auto;
+    overflow: hidden;
+}
+
+/*도파민이란? 파트*/
+#part1 {
+    /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
+
+    width: 1920px;
+    height: auto;
+    margin: auto;
+}
+
+/*콘텐츠-1 구현 시작*/
+#con1-box {
+    background-color: #F3F0FF;
+}
+.con1 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+    background-image: url("img/bank_img1.png");
+    position: relative;
+    width: 1440px;
+    height: 1390px;
+    margin: auto;
+
+}
+/*혹시 나도 도파민 중독?*/
+#con1-font1 {
+    position: absolute;
+    top: 278px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*말풍선*/
+#con1-img1 {
+    position: absolute;
+    top: 483px;
+    left: 515px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#con1-img2 {
+    position: absolute;
+    top: 698px;
+    left: 83px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+#con1-img3 {
+    position: absolute;
+    top: 911px;
+    left: 383px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+/*콘텐츠2 구현 시작*/
+#con2-box {
+    background-color: #E8E2FA;
+}
+.con2 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    width: 1440px;
+    height: 1089px;
+    margin: auto;
+}
+#con2-font1 {
+    font-weight: 500;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+#con2-font2 {
+    position: absolute;
+    top: 821px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.main-font {
+    position: absolute;
+    top: 236px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+/*아이콘 인터렉션*/
+.icon {
+    display: inline-block;
+    text-align: center;
+    margin-right: 50px;
+    transition: transform 0.3s ease-in-out;
+}
+.icon:hover {
+    transform: scale(1.1);
+}
+.icon img {
+    max-width: 100%;
+}
+.icon_box {
+    position: absolute;
+    top: 447px;
+    left: 223px;
+}
+
+/*콘텐츠3 구현 시작*/
+#con3-box {
+    background-image: url("img/bank_img22.png");
+}
+.con3 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+    position: relative;
+    height: 1130px;
+    width: 1440px;
+    margin: auto;
+}
+.con3 h3 {
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.con3 .no-font {
+    position: absolute;
+    top: 468px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+/*아이콘 인터렉션*/
+.con3 .no-icon {
+    position: absolute;
+    top: 643px;
+    left:843px;
+    animation: floatAnimation 1.5s infinite alternate;
+}
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-15px);
+    }
 }
 .con3 p {
     position: absolute;
-    top: 400px;
-    left:685px;
+    top: 881px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
 }
 
 /*콘텐츠4 구현 시작*/
 .con4 {
     /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
     position: relative;
-    height: 600px;
-    margin-top: 450px;
+    height: 1063px;
+    width: 1440px;
+    margin: auto;
 
 }
-.con4 h4 {
-    position: absolute;
-    top: 150px;
-    left: 150px;
+.con4 h5 {
+    top: 380px;
+    left: 220px;
 }
-.con4 .logo-font {
+.con4 .con4-font {
     position: absolute;
-    width: 400px;
-    top: 190px;
-    left: 150px;
-}
-.con4 p {
-    position: absolute;
-    top: 370px;
-    left: 150px;
+    top: 445px;
+    left: 220px;
 }
 .con4 .logo-icon {
     position: absolute;
-    width: 380px;
-    top: 120px;
-    left: 640px;
+    top: 400px;
+    left: 868px;
 }
-
+.con4 p {
+    top: 658px;
+    left: 220px;
+}
 /*콘텐츠5 구현 시작*/
 .con5-1 {
     /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
     position: relative;
-    height: 330px;
-    margin-top: 320px;
+    height: 567px;
+    width: 1440px;
+    margin: auto;
 
 }
 /*원 인터렉션*/
@@ -251,7 +388,7 @@ p {
     animation: moveAndShrink 8s forwards infinite;
     bottom: 0;
     transform-origin: bottom;
-    left: 320px;
+    left: 260px;
 }
 
 @keyframes moveAndShrink {
@@ -260,7 +397,7 @@ p {
         background-color: #FFC5B1;
     }
     50% {
-        transform: translateX(400px);
+        transform: translateX(800px);
         background-color: #BFAAFF;
         width: 100px;
         height: 100px;
@@ -270,52 +407,43 @@ p {
 
 .con5-2 {
     /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
     position: relative;
-    height: 330px;
+    height: 617px;
+    width: 1440px;
+    margin: auto;
 
 }
-.con5-2 p {
-    font-family: KimjungchulGothic-Bold;
-    color: #494848;
+.span-font {
+    font-size: 40px;
+    font-weight: 500;
+    color: black;
+    line-height: 60px;
     position: absolute;
-    top: 130px;
-    left: 400px;
-    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
-    line-height: 1.6;
 }
-.con5-2 .purple {
-    font-family: KimjungchulGothic-Bold;
+.con5-2 .span-font {
+    top: 202px;
+}
+.purple {
     color: #4F26D1;
 }
 
-.con5-2 .red {
-    font-family: KimjungchulGothic-Bold;
-    color: #ff8659;
-}
 
 /*콘텐츠6 구현 시작*/
+#con2-box {
+    background-color: #E8E2FA;
+}
 .con6 {
     /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
     position: relative;
-    height: 600px;
-    margin-top: 400px;
+    height: 1759px;
+    width: 1440px;
+    margin: auto;
 }
-.con6 p {
-    position: absolute;
-    font-family: KimjungchulGothic-Bold;
-    color: #494848;
-    font-size: 2rem;
-    text-align: center;
-    line-height: 1.6;
-    top: 90px;
-    left: 300px;
-}
-.con6 .purple {
-    font-family: KimjungchulGothic-Bold;
-    color: #4F26D1;
+.con6 .span-font {
+    top: 893px;
 }
 /*아이콘 인터렉션*/
 .icon-2 {
@@ -328,31 +456,66 @@ p {
     transform: scale(1.1);
 }
 .icon-2 img {
-    height: 200px;
     max-width: 100%;
+    width: 249px;
 }
 .icon_box-2 {
     position: absolute;
-    top: 290px;
-    left: 120px;
+    top: 438px;
+    left: 143px;
 }
 
 /*파임 탄생 파트*/
 #part2 {
     /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
 
-    width: 1180px;
-    height: 5670px;
+    width: 1920px;
+    height: auto;
     margin: auto;
-    overflow: hidden;
 }
 /*앱소개 구현 시작*/
+
+#app-title-box {
+    background-color: #7B5FCE;
+}
+.app-title {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+    position: relative;
+    height: 377px;
+    width: 1440px;
+    margin: auto;
+}
+.app-title h4 {
+    color: #DED4FF;
+    top: 112px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+.app-title h3 {
+    color: white;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%)
+
+}
+
+#app-box1 {
+    background-color: #F3F0FF;
+}
 .app {
     /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
-
     position: relative;
-    height: 870px;
-    margin-top: 120px;
+    height: 1280px;
+    width: 1440px;
+    margin: auto;
+}
+.app h3 {
+    top: 260px;
+    left: 162px;
+}
+.Team-span {
+    font-weight: 400;
+    font-size: 40px;
 }
 .logo-font1 {
     position: absolute;
@@ -360,42 +523,52 @@ p {
     top: 30px;
     left: 80px;
 }
-.app h3 {
-    position: absolute;
-    font-size: 1.9rem;
-    color: #666666;
-    top: 80px;
-    left: 80px;
+.time-p {
+    top: 366px;
+    left: 162px;
+
 }
 .app .cc {
     position: absolute;
-    top: 620px;
-    left: 240px;
-    color: #4F26D1;
+    font-size: 30px;
+    color: #4F31AE;
+    top: 1016px;
+    left: 265px;
 }
 .app .yy {
     position: absolute;
-    top: 620px;
-    left: 559px;
+    font-size: 30px;
+    top: 1016px;
+    left: 677px;
     color: #4F26D1;
 }
 .app .jj {
     position: absolute;
-    top: 620px;
-    left: 876px;
+    font-size: 30px;
+    top: 1016px;
+    left: 1084px;
     color: #4F26D1;
 }
-.app .time_logo {
+.app .cc1 {
     position: absolute;
-    width: 400px;
-    top: 220px;
-    left: 380px;
+    font-size: 25px;
+    color: #4F31AE;
+    top: 590px;
+    left: 264px;
 }
-.app p {
+.app .yy1 {
     position: absolute;
-    text-align: center;
-    top: 730px;
-    left: 330px;
+    font-size: 25px;
+    top: 590px;
+    left: 660px;
+    color: #4F26D1;
+}
+.app .jj1 {
+    position: absolute;
+    font-size: 25px;
+    top: 590px;
+    left: 1060px;
+    color: #4F26D1;
 }
 /*팀소개 인터렉션*/
 .icon-3 {
@@ -404,52 +577,561 @@ p {
     margin-right: 70px;
 }
 .icon-3 img {
-    height: 240px;
+    height: 330px;
     max-width: 100%;
     transition: opacity 0.3s ease-in-out;
 }
 .icon_box-3 {
     position: absolute;
-    top: 350px;
+    top: 653px;
     left: 150px;
 }
 
 /*앱소개2 구현 시작*/
+#app-box2 {
+    background-color: #E8E2FA;
+}
 .app2 {
     /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
 
     position: relative;
-    height: 870px;
-    margin-top: 370px;
+    height: 1161px;
+    width: 1440px;
+    margin: auto;
 }
 .app2 h3 {
-    position: absolute;
-    letter-spacing: 8px;
-    top: 110px;
-    left: 330px;
+    top: 212px;
+    left: 162px;
 }
 .app2 h5 {
-    font-size: 1.3rem;
-    color: #4F26D1;
-    margin-bottom: 13px;
+    color: black;
+    top: 315px;
+    left: 162px;
 }
-.app2 p {
-    line-height: 1.5;
+.Goal-span {
+    font-weight: 400;
 }
-.logo_font2 {
+.app2 img {
     position: absolute;
-    width: 700px;
-    top: 200px;
-    left: 240px;
 }
-.font_box {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    padding: 550px 0;
+.goal-title1 {
+    top: 506px;
+    left: 188px;
 }
-.font_box > div {
-    flex: 1;
-    margin: 0 60px;
-    /*box-shadow: inset -5px -5px 15px rgb(198, 122, 22);*/
+.goal-title2 {
+    top: 649px;
+    left: 188px;
+}
+.goal-title3 {
+    top: 794px;
+    left: 188px;
+}
+.goal-p1 {
+    top: 506px;
+    left: 492px;
+}
+.goal-p2 {
+    top: 649px;
+    left: 492px;
+}
+.goal-p3 {
+    top: 794px;
+    left: 492px;
+}
+
+/*앱소개3 구현 시작*/
+
+#app-box3 {
+    background-color: #F3F0FF;
+}
+.app3 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    width: 1440px;
+    height: 986px;
+    margin: auto;
+}
+.app3 h3 {
+    top: 366px;
+    left: 162px
+}
+.Concept-title {
+    position: absolute;
+    top: 483px;
+}
+.app3 p {
+    text-align: center;
+    top: 875px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+/*앱소개3 구현 시작*/
+.app4 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 498px;
+    width: 1920px;
+    background-color: #F3F0FF;
+}
+.app4 img {
+    position: absolute;
+    top: 73px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+/*앱소개4 구현 시작*/
+.app5 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1202px;
+    width: 1440px;
+    margin: auto;
+}
+.app5 h3 {
+    top: 426px;
+    left: 162px;
+}
+.logo-pp {
+    top: 518px;
+    left: 162px;
+}
+.app5 img {
+    position: absolute;
+}
+.logo_logo {
+    top: 758px;
+    left: 272px;
+}
+.app_logo {
+    top: 733px;
+    left: 824px;
+}
+.logo-p {
+    top: 1108px;
+    left: 420px;
+}
+.app-p {
+    top: 1108px;
+    left: 978px;
+}
+/*앱소개5 구현 시작*/
+.app6 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1171px;
+    width: 1440px;
+    margin: auto;
+}
+.app6 h3 {
+    top: 427px;
+    left: 162px;
+}
+.app6 p {
+    top: 521px;
+    left: 162px;
+}
+.app6 .color {
+    position: absolute;
+    top: 707px;
+    left: 164px;
+}
+/*앱소개6 구현 시작*/
+.app7 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1133px;
+    width: 1440px;
+    margin: auto;
+}
+.app7 h3 {
+    top: 426px;
+    left: 162px;
+}
+.app7 p {
+    top: 517px;
+    left: 162px;
+}
+.app7 .font {
+    position: absolute;
+    top: 739px;
+    left: 164px;
+}
+/*앱소개7 구현 시작*/
+.app8 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1632px;
+    width: 1440px;
+    margin: auto;
+}
+.app8 h3 {
+    top: 422px;
+    left: 162px;
+}
+.app8 p {
+    top: 513px;
+    left: 162px;
+}
+.app8 .Character-img {
+    animation: floatAnimation 1.5s infinite alternate;
+    position: absolute;
+    top: 726px;
+    left: 210px;
+}
+.app8 .Character-img1 {
+    position: absolute;
+    top: 1052px;
+    left: 290px;
+}
+.app8 .Character-1 {
+    top: 1150px;
+    left: 294px;
+}
+.app8 .Character-2 {
+    top: 1150px;
+    left: 654px;
+}
+.app8 .Character-3 {
+    top: 1150px;
+    left: 1038px;
+}
+/*앱설명 파트*/
+#part3 {
+    /*box-shadow: inset -5px -5px 15px rgba(255, 0, 0, 0.5);*/
+
+    width: 1920px;
+    height: auto;
+    margin: auto;
+}
+/*앱설명 메인*/
+
+#service-box1 {
+    background-image: url("img/bank_img33.png");
+}
+.service1 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1225px;
+    width: 1440px;
+    margin: auto;
+}
+.service1 img {
+    position: absolute;
+}
+.service1 h3 {
+    top: 115px;
+    left: 162px;
+}
+.service1 h6 {
+    color: #5A5A5A;
+    top: 571px;
+    left: 802px;
+}
+.service1 h4 {
+    top: 618px;
+    left: 802px;
+}
+.service1 p {
+    top: 705px;
+    left: 802px;
+}
+.service1 .title-p {
+    top: 196px;
+    left: 162px;
+}
+.myfarm_icon {
+    top: 321px;
+    left: 359px;
+    animation: floatAnimation 1.5s infinite alternate;
+}
+.service_farm {
+    top: 419px;
+    left: 177px;
+}
+.service1 .icon8 {
+    top: 509px;
+    left: 1003px;
+}
+/*앱설명 파트1*/
+.service2 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1793px;
+    width: 1440px;
+    margin: auto;
+}
+.service2 img {
+    position: absolute;
+}
+.service2 .icon9-1 {
+    top: 889px;
+    left: 162px;
+}
+.service2 .icon9 {
+    top: 822px;
+    left: 461px;
+}
+.slider {
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 706px;
+    left: 709px;
+}
+.screen1-1,
+.screen1-2 {
+    display: none;
+}
+.service2 h4 {
+    top: 989px;
+    left: 162px;
+}
+.service2 h6{
+    top: 1087px;
+    left: 162px;
+}
+.service2 p {
+    top: 1138px;
+    left: 162px;
+}
+.service2 .orange {
+    color: #FEA78B;
+}
+.service2 .berry {
+    color: #DCB1F9;
+}
+.service2 .red {
+    color: #FE8883;
+}
+.service2 .green {
+    color: #95D7B3;
+}
+/*앱설명 파트2*/
+.service3 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1458px;
+    width: 1440px;
+    margin: auto;
+}
+.service3 img {
+    position: absolute;
+}
+.service3 .icon10-1 {
+    top: 567px;
+    left: 806px;
+}
+.service3 .icon10 {
+    top: 483px;
+    left: 1080px;
+}
+.service3 h4 {
+    top: 659px;
+    left: 806px;
+}
+.service3 h6 {
+    top: 758px;
+    left: 806px;
+}
+.service3 p {
+    top: 813px;
+    left: 806px;
+}
+.service3 .screen2 {
+    top: 402px;
+    left: 25px;
+}
+/*앱설명 파트3*/
+.service4 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1461px;
+    width: 1440px;
+    margin: auto;
+}
+.service4 img {
+    position: absolute;
+}
+.service4 .icon11-1 {
+    top: 594px;
+    left: 162px;
+}
+.service4 .icon11 {
+    top: 569px;
+    left: 469px;
+}
+.service4 h4 {
+    top: 691px;
+    left: 162px;
+}
+.service4 h6 {
+    top: 793px;
+    left: 162px;
+}
+.service4 p {
+    top: 852px;
+    left: 162px;
+}
+.slider1 {
+    transition: opacity 1s ease-in-out; /* 페이드 효과 적용 */
+    position: absolute;
+    top: 430px;
+    left: 709px;
+}
+/*앱설명 파트4*/
+.service5 {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1459px;
+    width: 1440px;
+    margin: auto;
+}
+.service5 img {
+    position: absolute;
+}
+.service5 .icon12-1 {
+    top: 347px;
+    left: 805px;
+}
+.service5 .icon12 {
+    top: 183px;
+    left: 530px;
+}
+.service5 .icon13 {
+    top: 229px;
+    left: 1127px;
+}
+.service5 .icon14 {
+    top: 804px;
+    left: 838px;
+}
+.service5 h4 {
+    top: 445px;
+    left: 805px;
+}
+.service5 h6 {
+    top: 549px;
+    left: 805px;
+}
+.service5 p {
+    top: 606px;
+    left: 805px;
+}
+.service5 .screen4 {
+    top: 183px;
+    left: 25px;
+}
+/*엔딩*/
+.ending {
+    /*box-shadow: inset -5px -5px 15px rgb(45, 198, 22);*/
+
+    position: relative;
+    height: 1203px;
+    width: 1440px;
+    margin: auto;
+}
+.ending h3 {
+    text-align: center;
+    line-height: 80px;
+    top: 465px;
+    left: 344px;
+}
+.ending img {
+    position: absolute;
+}
+.ending .icon15 {
+    top: 566px;
+    animation: floatAnimation 1.5s infinite alternate;
+}
+.ending .icon16 {
+    top: 860px;
+    left: 623px;
+    animation: floatAnimation 1.5s infinite alternate;
+}
+.ending .icon17 {
+    top: 603px;
+    left: 993px;
+    animation: floatAnimation 1.5s infinite alternate;
+}
+
+#footer-box {
+    background-color: #7B5FCE;
+    height: 336px;
+}
+#footer {
+    width: 1440px;
+    height: 336px;
+    background-color: #7B5FCE;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+#footer img {
+    position: absolute;
+}
+.footer_logo {
+    top: 57px;
+    left: 15px;
+}
+.footer1 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 30px;
+    top: 146px;
+    left: 15px;
+}
+.footer2 {
+    font-weight: 300;
+    color: #ffffff;
+    top: 186px;
+    left: 15px;
+}
+.footer3-1 {
+    font-weight: 600;
+    color: #ffffff;
+    top: 227px;
+    left: 955px;
+}
+.footer3-2 {
+    font-weight: 600;
+    color: #ffffff;
+    top: 227px;
+    left: 1131px;
+}
+.footer3-3 {
+    font-weight: 600;
+    color: #ffffff;
+    top: 227px;
+    left: 1320px;
+}
+.footer4-1 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFFFFF;
+    top: 263px;
+    left: 955px;
+}
+.footer4-2 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFFFFF;
+    top: 263px;
+    left: 1131px;
+}
+.footer4-3 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFFFFF;
+    top: 263px;
+    left: 1320px;
 }
