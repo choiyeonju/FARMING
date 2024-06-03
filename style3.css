@@ -130,6 +130,7 @@ h6 {
     color: #4F31AE;
     position: absolute;
 }
+
 p {
     font-size: 20px;
     font-weight: 400;
@@ -158,6 +159,15 @@ p {
     top: 270px;
     left: 800px;
     animation: floatAnimation 1.5s infinite alternate;
+}
+#banner h6 {
+    font-weight: 500;
+    font-size: 30px;
+    color: #D5C7FF;
+
+    position: absolute;
+    top: 253px;
+    left: 50px;
 }
 @keyframes floatAnimation {
     0% {
