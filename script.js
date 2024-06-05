@@ -113,7 +113,7 @@
   const images = ["img/screen3.png", "img/screen3-1.png", "img/screen3-2.png", "img/screen3-3.png"]; // 바뀔 이미지들의 경로 배열
   let currentIndex = 0;
   let isScrolling = false;
-
+  let intervalId;
 
   function changeImage() {
    const slider = document.querySelector(".slider1");
@@ -126,10 +126,9 @@
    }, 1000);
   }
 
-  setInterval(changeImage, 4000);
+  intervalId = setInterval(changeImage, 4000);
 
   window.addEventListener("scroll", function() {
-
    if (!isScrolling) {
     isScrolling = true;
     clearInterval(intervalId);
